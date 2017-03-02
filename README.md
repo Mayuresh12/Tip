@@ -2,6 +2,14 @@
 Tip Calculator Project
 Tip
 ==================
+# Pre-work - *TipCalculator*
+
+**Name of your app** is a tip calculator application for iOS.
+
+Submitted by: **Mayuresh Rao**
+
+Time spent: **15** hours spent in total
+
 
 Tip Calculator app for CodePath
 

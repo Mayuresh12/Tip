@@ -22,10 +22,9 @@ Completed user stories:
 
 * [x] Required: Basic tip calculator functionatliy
 * [x] Required: Settings page
-* [x] Optional: View animation
+* [x] Optional: UIView animation for the setting button.
 * [x] Optional: Use locale specific currency and currency thousands separators
-* [x] Optional: UIView pop up for the settings menu
-* [x] UI animations
+* [x] Optional: pop up for the settings menu
 * [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 * [x] UIpickerView for selecting new value of the tip percentage.
 

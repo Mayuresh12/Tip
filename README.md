@@ -28,24 +28,28 @@ Completed user stories:
 * [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 * [x] UIpickerView for selecting new value of the tip percentage.
 
-The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
-
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
+
+
 **Walkthrough of required  user stories:**
 
 ![](gif/1.gif)
+
+
 
 **Walkthrough of  optional user stories:**
 
 ![](gif/2.gif)
 
-**Walkthrough of locale specific currency (iOS7 simulator):**
+
+
+**Walkthrough of locale specific currency (iOS7:**
 
 ![](gif/3.gif)
+
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

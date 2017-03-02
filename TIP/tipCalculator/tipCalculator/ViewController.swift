@@ -39,7 +39,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBOutlet weak var totalOutlet: UILabel!
     @IBOutlet weak var tipOutlet: UILabel!
     
-    @IBAction func tipPercentageActionButton(_ sender: Any) {
+    
+    func calculate(){
         var tip: Double = 0
         var total : Double = 0
         var bill : Double = 0
@@ -61,8 +62,12 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         totalOutlet.adjustsFontSizeToFitWidth = false;
         totalOutlet.lineBreakMode = .byTruncatingTail
+    }
+    
+    
+    @IBAction func tipPercentageActionButton(_ sender: Any) {
+        calculate()
         
-
     }
     var myString:String?
     override func viewDidLoad() {
@@ -160,6 +165,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         // firstViewController.tipPercentageController.setTitle(second.text!, forSegmentAt: 1)
         //firstViewController.tipPercentageController.setTitle(third.text!, forSegmentAt: 2)
         self.tipPercentageController.selectedSegmentIndex = defaultUISelector.selectedSegmentIndex
+        calculate()
+
         self.removeAnimate()
     }
     
@@ -180,10 +187,14 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         }
         else if(second.isFirstResponder)
         {
+            tipPercentages[1] = a!
+
             second.text=("\(a!)")
         }
         else
         {
+            tipPercentages[2] = a!
+
             third.text=("\(a!)")
         }
         
@@ -206,6 +217,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
 
     func addTapped(sender: UIBarButtonItem)
     {
+        view.endEditing(true)
 
         if (settingViewOutlet.isHidden == true)
         {
@@ -232,29 +244,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
 
     @IBAction func calculateTip2(_ sender: Any)
     {
-        
-        
-            var tip: Double = 0
-            var total : Double = 0
-            var bill : Double = 0
-
-        let formatter = NumberFormatter()
-        formatter.numberStyle = NumberFormatter.Style.currency
-         bill = Double(billText.text!) ?? 0
-         tip = bill * (0.01) * Double(tipPercentages[tipPercentageController.selectedSegmentIndex])
-         total = tip + bill
-        let formattedNum1 = formatter.string(from: NSNumber(value : tip))
-        //tipOutlet.sizeToFit()
-        
-        tipOutlet.text = formattedNum1
-        let formattedNum2 = formatter.string(from: NSNumber(value : total))
-        //totalOutlet.sizeToFit()
-        totalOutlet.text = formattedNum2
-        tipOutlet.adjustsFontSizeToFitWidth = false;
-        tipOutlet.lineBreakMode = .byTruncatingTail
-
-        totalOutlet.adjustsFontSizeToFitWidth = false;
-        totalOutlet.lineBreakMode = .byTruncatingTail
+           calculate()
 
     }
     
